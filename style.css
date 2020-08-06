@@ -7,18 +7,19 @@
 }
 body {
   font-family: iceberg;
-  background-color: #181818;
+  background-color: #252525;
 }
 
 nav {
   background: #181717;
-  height: 70px;
+  height: 60px;
   width: 100%;
+  box-shadow: 0px 2px 2px #000000;
 }
 label.logo {
   color: white;
-  font-size: 40px;
-  line-height: 70px;
+  font-size: 30px;
+  line-height: 60px;
   padding: 50px;
 }
 nav ul {
@@ -27,15 +28,15 @@ nav ul {
 }
 nav ul li {
   display: inline-block;
-  line-height: 70px;
+  line-height: 60px;
   margin: 0 20px;
 }
 nav ul li a {
   color: white;
   font-size: 22px;
   text-transform: uppercase;
-  padding: 5px 11px;
-  border-radius: 3px;
+  padding: 3px 9px;
+  border-radius: 5px;
 }
 a.active,
 a:hover {
@@ -46,16 +47,25 @@ a:hover {
   font-size: 30px;
   color: white;
   float: right;
-  line-height: 70px;
+  padding-right: 20px;
+  line-height: 60px;
   cursor: pointer;
   display: none;
 }
+i.checkbtn,
+i:hover {
+  background: #4d4d4d;
+  padding: 7px 7px;
+  border-radius: 100px;
+  transition: 0.3s;
+}
+
 #check {
   display: none;
 }
-@media (max-width: 952px) {
+@media (max-width: 1024px) {
 }
-@media (max-width: 952px) {
+@media (max-width: 1024px) {
   label.logo {
     font-size: 30px;
     padding-left: 50px;
@@ -73,11 +83,12 @@ a:hover {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #181818;
-    top: 70px;
-    left: -100%;
+    background: #252525;
+    top: 60px;
+    left: 100%;
+    overflow: auto;
     text-align: center;
-    transition: all 0.3s;
+    transition: all 0.8s;
   }
   nav ul li {
     display: block;
@@ -85,31 +96,21 @@ a:hover {
     line-height: 40px;
   }
   nav ul li a {
-    font-size: 20px;
-  }
-  a:hover,
-  a.active {
-    background: none;
-    color: #696969;
-  }
-  #check:checked ~ ul {
-    left: 0;
+    font-size: 22px;
+    padding: 3px 9px;
+    border-radius: 5px;
   }
 }
-section {
-  background: url(./images/laptop2.jpg) no-repeat;
-  background-size: cover;
-  height: calc(100vh - 80px);
+a.active,
+a:hover {
+  background: #4d4d4d;
+  transition: 0.3s;
 }
-.footer {
-  position: fixed;
+#check:checked ~ ul {
   left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #181717;
-  color: white;
-  text-align: center;
-  font-size: 24px;
+}
+.centered {
+  opacity: 0;
 }
 .centered {
   position: absolute;
